@@ -1,0 +1,48 @@
+#+author: conao3
+#+date: <2019-01-31 Thu>
+
+[[https://github.com/conao3/firebase-conao3][https://img.shields.io/github/tag/conao3/firebase-conao3.svg?style=flat-square]]
+[[https://github.com/conao3/firebase-conao3][https://img.shields.io/github/license/conao3/firebase-conao3.svg?style=flat-square]]
+[[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/firebase-conao3.gif]]
+
+~firebase-conao3~ is project hosting on google firebase.
+* Install
+You don't need install. This project is already deployed on google firebase.
+
+* Usage
+
+* Deploy
+If you want to deploy your firebase, clone and deploy.
+#+begin_src bash
+  git clone https://github.com/conao3/firebase-conao3
+
+  cd firebase-conao3/
+
+  # firebase-tool initialize if you need
+  npm install -g firebase-tool
+  firebase login
+
+  firebase init
+  firebase deploy --only functions
+#+end_src
+
+* License
+The GNU Affero General Public License, version 3 (AGPL3)
+
+Copyright (c) 2019 Naoya Yamashita (@conao3) - https://conao3.com
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the Affero GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the Affero GNU General Public
+License for more details.
+
+You should have received a copy of the Affero GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+* Author
+Naoya Yamashita (@conao3)
