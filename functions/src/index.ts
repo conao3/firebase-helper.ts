@@ -40,10 +40,25 @@ export const hello = functions.https.onRequest((request, response) => {
     response.send("Hello from Firebase!");
 });
 
+export const hello_args = functions.https.onRequest((request, response) => {
+    if (request.path !== "/") {
+        let param = request.path.split('/')[1];
+        response.send("Hello from Firebase!" + param);
+    } else {
+        response.send("Hello from Firebase!");
+    }
+});
+
 export const shield_docker = functions.https.onRequest ((request, response) => {
     // response.send("Hello from Firebase!");
+    const args = request.path.split('/');
+    const username = args[1];
+    const imagename = args[2];
+    const badgetype = args[3];
+
     response.type('svg');
-    fetch ("https://api.microbadger.com/v1/images/conao3/po4a")
+
+    fetch (`https://api.microbadger.com/v1/images/${username}/${imagename}`)
         .then (res => {
             if (!res.ok) {
                 throw new Error('error');
@@ -55,8 +70,8 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
             var leftstr:string;
             var leftwidth:number;
             var rightstr:string;
-            
-            switch (request.query.type) {
+
+            switch (badgetype) {
                 case "name":
                     leftstr = "docker image";
                     leftwidth = 86;
