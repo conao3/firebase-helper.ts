@@ -35,6 +35,8 @@ When functions are tested locally, access to the database and
 saving are done on the production data.
 
 ** Functions test
+cf: https://firebase.google.com/docs/functions/local-emulator
+
 Open other terminal and run it to automate build TS.
 #+begin_src bash
   cd firebase-conao3/functions/
