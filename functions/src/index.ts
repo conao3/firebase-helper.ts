@@ -111,6 +111,7 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
                     rightstr = "unknown"
                     console.info(`unknown type ${badgetype} on ${username}/${imagename}`);
             }
+            console.info(`${badgetype} on ${username}/${imagename}`);
             response.send(shield_docker_svg(
                 leftstr, rightstr, 170, leftwidth, color));
         })
