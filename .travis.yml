@@ -7,9 +7,11 @@ git:
 node_js:
   - "8"
 
-script:
+install:
   - cd functions
   - npm install firebase-tools
   - npm install
-  - firebase serve --only functions --port=9000
+
+script:
+  - firebase serve --only functions --port=9000 --token=$FIREBASE_TOKEN
   - curl http://localhost:9000/conao3-helper/us-central1/hello
