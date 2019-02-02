@@ -10,6 +10,11 @@
 You don't need install. This project is already deployed on google firebase.
 
 * Usage
+Access https://us-central1-conao3-helper.cloudfunctions.net/hello or ~curl~ it.
+#+begin_src bash
+  curl https://us-central1-conao3-helper.cloudfunctions.net/hello
+    Hello from Firebase!
+#+end_src
 
 * Deploy
 If you want to deploy your firebase, clone , fix and deploy.
