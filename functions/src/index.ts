@@ -52,7 +52,7 @@ export const hello_args = functions.https.onRequest((request, response) => {
 
 export const shield_docker = functions.https.onRequest ((request, response) => {
     // response.send("Hello from Firebase!");
-    const args = request.path.split('/');
+    const args = request.path && request.path.split('/');
     const username = args[1];
     const imagename = args[2];
     const badgetype = args[3];
@@ -60,6 +60,7 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
 
     response.type('svg');
 
+    console.log(`https://api.microbadger.com/v1/images/${username}/${imagename}`);
     fetch (`https://api.microbadger.com/v1/images/${username}/${imagename}`)
         .then (res => {
             if (!res.ok) {
