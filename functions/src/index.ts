@@ -25,7 +25,7 @@ const shield_docker_svg = (leftstr:string, rightstr:string, width:number, leftwi
     const leftcenter = leftwidth + (width-leftwidth)/2;
     const result = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20">
 <g>
-<rect x="0" y="0" width="100%" height="100%" fill="${color}"></rect>
+<rect x="0" y="0" width="100%" height="100%" fill="#${color}"></rect>
 <rect x="0" y="0" width="${leftwidth}" height="100%" fill="#555"></rect>
 </g>
 <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
@@ -55,6 +55,7 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
     const username = args[1];
     const imagename = args[2];
     const badgetype = args[3];
+    const color = request.query.color || "007ec6";
 
     response.type('svg');
 
@@ -108,10 +109,10 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
                     rightstr = "unknown"
             }
             response.send(shield_docker_svg(
-                leftstr, rightstr, 170, leftwidth, "#007ec6"));
+                leftstr, rightstr, 170, leftwidth, color));
         })
         .catch (error => {
-            response.send(shield_docker_svg("docker unknown", "unknown", 170, 86, "#9f9f9f"));
+            response.send(shield_docker_svg("docker unknown", "unknown", 170, 86, color));
         });
 });
 
