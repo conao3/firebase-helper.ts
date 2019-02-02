@@ -9,13 +9,15 @@
 
 - [[#install][Install]]
 - [[#usage][Usage]]
-- [[#local-test][Local test]]
-  - [[#localtest-notice][localtest NOTICE]]
-  - [[#functions-test][Functions test]]
-- [[#deploy][Deploy]]
-  - [[#clone][Clone]]
-  - [[#fix-firebaserc][Fix .firebaserc]]
+- [[#developer-information][Developer information]]
+  - [[#install-developer-tools][Install developer tools]]
+  - [[#local-test][Local test]]
+    - [[#localtest-notice][localtest NOTICE]]
+    - [[#functions-test][Functions test]]
   - [[#deploy][Deploy]]
+    - [[#clone][Clone]]
+    - [[#fix-firebaserc][Fix .firebaserc]]
+    - [[#deploy][Deploy]]
 - [[#license][License]]
 - [[#author][Author]]
 
@@ -29,12 +31,23 @@ Access https://us-central1-conao3-helper.cloudfunctions.net/hello or ~curl~ it.
     Hello from Firebase!
 #+end_src
 
-* Local test
-** localtest NOTICE
+* Developer information
+** Install developer tools
+#+begin_src bash
+  # firebase-tool initialize if you need
+  npm install -g firebase-tool
+  firebase login
+
+  cd conao3-helper/functions
+  npm install
+#+end_src
+
+** Local test
+*** localtest NOTICE
 When functions are tested locally, access to the database and
 saving are done on the production data.
 
-** Functions test
+*** Functions test
 cf: https://firebase.google.com/docs/functions/local-emulator
 
 Open other terminal and run it to automate build TS.
@@ -59,17 +72,17 @@ Access url on prompt.
     Hellow from Firebase!
 #+end_src
 
-* Deploy
+** Deploy
 If you want to deploy your firebase, clone, fix and deploy.
 
-** Clone
+*** Clone
 #+begin_src bash
   git clone https://github.com/conao3/firebase-helper
 
   cd firebase-helper/
 #+end_src
 
-** Fix .firebaserc
+*** Fix .firebaserc
 Fix firebase project name in ~.firebaserc~.
 #+begin_src diff
   diff --git a/.firebaserc b/.firebaserc
@@ -85,12 +98,8 @@ Fix firebase project name in ~.firebaserc~.
    }
 #+end_src
 
-** Deploy
+*** Deploy
 #+begin_src bash
-  # firebase-tool initialize if you need
-  npm install -g firebase-tool
-  firebase login
-
   firebase deploy
 #+end_src
 
