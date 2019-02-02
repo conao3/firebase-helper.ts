@@ -111,7 +111,7 @@ Fix firebase project name in ~.firebaserc~.
   - [[https://expressjs.com/en/4x/api.html#res][Express Document - Response]]
 - [[https://firebase.google.com/docs/guides/][Firebase]]
   - [[https://firebase.google.com/docs/functions/][Firebase Document - Cloud Functions]]
-  - [[https://firebase.google.com/docs/reference/functions/][Firebase Reference - functions]]
+  - [[https://firebase.google.com/docs/reference/functions/][Firebase Reference - Functions]]
 - [[https://cloud.google.com/docs/][Google Cloud Functions]]
   - [[https://cloud.google.com/functions/docs/][Google Cloud Functions Document - Functions]]
 
