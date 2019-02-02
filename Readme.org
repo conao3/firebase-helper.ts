@@ -36,7 +36,6 @@ Access https://us-central1-conao3-helper.cloudfunctions.net/hello or ~curl~ it.
 #+begin_src bash
   # firebase-tool initialize if you need
   npm install -g firebase-tools
-  npm install -g @angular/cli
   firebase login
 
   cd conao3-helper/functions
