@@ -12,18 +12,38 @@ You don't need install. This project is already deployed on google firebase.
 * Usage
 
 * Deploy
-If you want to deploy your firebase, clone and deploy.
+If you want to deploy your firebase, clone , fix and deploy.
+
+** Clone
 #+begin_src bash
   git clone https://github.com/conao3/firebase-conao3
 
   cd firebase-conao3/
+#+end_src
 
+** Fix
+Fix firebase project name in ~.firebaserc~.
+#+begin_src diff
+  diff --git a/.firebaserc b/.firebaserc
+  index e1571d9..3c75a00 100644
+  --- a/.firebaserc
+  +++ b/.firebaserc
+  @@ -1,5 +1,5 @@
+   {
+     "projects": {
+  -    "default": "conao3-com"
+  +    "default": "YOUR-FIREBASE-PROJECT"
+     }
+   }
+#+end_src
+
+** Deploy
+#+begin_src bash
   # firebase-tool initialize if you need
   npm install -g firebase-tool
   firebase login
 
-  firebase init
-  firebase deploy --only functions
+  firebase deploy
 #+end_src
 
 * License
