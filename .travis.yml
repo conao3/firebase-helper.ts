@@ -1,0 +1,12 @@
+language: generic
+dist: trusty
+
+git:
+  depth: 1
+
+script:
+  - cd functions
+  - npm install -g firebase-tool
+  - npm install
+  - firebase serve --only functions --port=9000
+  - curl http://localhost:9000/conao3-helper/us-central1/hello
