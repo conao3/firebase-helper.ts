@@ -15,6 +15,7 @@
  */
 
 import fetch from 'node-fetch';
+import * as prettyBytes from 'pretty-bytes';
 import * as jp from 'jsonpath';
 import * as functions from 'firebase-functions';
 
@@ -86,7 +87,7 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
                 case "size":
                     leftstr = "docker size";
                     leftwidth = 75;
-                    rightstr = `${jp.query(resjson, "$.DownloadSize")}`;
+                    rightstr = prettyBytes(Number(jp.query(resjson, "$.DownloadSize")))
                     break;
                 case "version":
                     leftstr = "docker version";
