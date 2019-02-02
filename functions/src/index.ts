@@ -28,10 +28,10 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
     // response.send("Hello from Firebase!");
     fetch ("https://api.microbadger.com/v1/images/conao3/po4a")
         .then (res => {
-            if (res.ok) {
-                return res.json();
+            if (!res.ok) {
+                throw new Error('error');
             }
-            throw new Error('error');
+            return res.json();
         })
         .then (resjson => {
             response.send(JSON.stringify(resjson));
