@@ -1,11 +1,11 @@
 #+author: conao3
 #+date: <2019-01-31 Thu>
 
-[[https://github.com/conao3/firebase-conao3][https://img.shields.io/github/tag/conao3/firebase-conao3.svg?style=flat-square]]
-[[https://github.com/conao3/firebase-conao3][https://img.shields.io/github/license/conao3/firebase-conao3.svg?style=flat-square]]
-[[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/firebase-conao3.gif]]
+[[https://github.com/conao3/firebase-helper][https://img.shields.io/github/tag/conao3/firebase-helper.svg?style=flat-square]]
+[[https://github.com/conao3/firebase-helper][https://img.shields.io/github/license/conao3/firebase-helper.svg?style=flat-square]]
+[[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/firebase-helper.gif]]
 
-~firebase-conao3~ is project hosting on google firebase.
+~firebase-helper~ is project hosting on google firebase.
 
 - [[#install][Install]]
 - [[#usage][Usage]]
@@ -39,14 +39,14 @@ cf: https://firebase.google.com/docs/functions/local-emulator
 
 Open other terminal and run it to automate build TS.
 #+begin_src bash
-  cd firebase-conao3/functions/
+  cd firebase-helper/functions/
   ./node_modules/.bin/tsc --watch
 #+end_src
 
 Serve functinos on localhost.
 #+begin_src bash
   firebase serve --only functions --port=9000
-    === Serving from '/Users/conao/Develop/git/firebase-conao3'...
+    === Serving from '/Users/conao/Develop/git/firebase-helper'...
 
     i  functions: Preparing to emulate functions.
     Warning: You're using Node.js v11.8.0 but Google Cloud Functions only supports v6.11.5.
@@ -64,9 +64,9 @@ If you want to deploy your firebase, clone, fix and deploy.
 
 ** Clone
 #+begin_src bash
-  git clone https://github.com/conao3/firebase-conao3
+  git clone https://github.com/conao3/firebase-helper
 
-  cd firebase-conao3/
+  cd firebase-helper/
 #+end_src
 
 ** Fix .firebaserc
