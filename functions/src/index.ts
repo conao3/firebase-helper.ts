@@ -52,11 +52,51 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
         })
         .then (resjson => {
             // response.send(`${jp.query(resjson, "$.DownloadSize")}`);
+            var leftstr:string;
+            var leftwidth:number;
+            var rightstr:string;
+            
+            switch (request.query.type) {
+                case "name":
+                    leftstr = "docker image";
+                    leftwidth = 86;
+                    rightstr = `${jp.query(resjson, "$.ImageName")}`;
+                    break;
+                case "layers":
+                    leftstr = "docker layers";
+                    leftwidth = 86;
+                    rightstr = `${jp.query(resjson, "$.LayerCount")} layers`;
+                    break;
+                case "size":
+                    leftstr = "docker size";
+                    leftwidth = 75;
+                    rightstr = `${jp.query(resjson, "$.DownloadSize")}`;
+                    break;
+                case "version":
+                    leftstr = "docker version";
+                    leftwidth = 92;
+                    rightstr = `v${jp.query(resjson, "$.LatestVersion")}`;
+                    break;
+                case "pulls":
+                    leftstr = "docker pulls";
+                    leftwidth = 80;
+                    rightstr = `${jp.query(resjson, "$.PullCount")}`;
+                    break;
+                case "stars":
+                    leftstr = "docker stars";
+                    leftwidth = 80;
+                    rightstr = `${jp.query(resjson, "$.StarCount")}`;
+                    break;
+                default:
+                    leftstr = "docker unknown";
+                    leftwidth = 101;
+                    rightstr = "unknown"
+            }
             response.send(shield_docker_svg(
-                request.query.type, `${jp.query(resjson, "$.DownloadSize")}`, 170, 86, "#007ec6"));
+                leftstr, rightstr, 170, leftwidth, "#007ec6"));
         })
         .catch (error => {
-            response.send(shield_docker_svg(request.query.type, "unknown", 170, 86, "#9f9f9f"));
+            response.send(shield_docker_svg("docker unknown", "unknown", 170, 86, "#9f9f9f"));
         });
 });
 
