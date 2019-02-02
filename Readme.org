@@ -18,6 +18,7 @@
     - [[#clone][Clone]]
     - [[#fix-firebaserc][Fix .firebaserc]]
     - [[#deploy][Deploy]]
+  - [[#reference][Reference]]
 - [[#license][License]]
 - [[#author][Author]]
 
