@@ -6,6 +6,16 @@
 [[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/firebase-conao3.gif]]
 
 ~firebase-conao3~ is project hosting on google firebase.
+
+- [[#install][Install]]
+- [[#usage][Usage]]
+- [[#deploy][Deploy]]
+  - [[#clone][Clone]]
+  - [[#fix-firebaserc][Fix .firebaserc]]
+  - [[#deploy][Deploy]]
+- [[#license][License]]
+- [[#author][Author]]
+
 * Install
 You don't need install. This project is already deployed on google firebase.
 
@@ -26,7 +36,7 @@ If you want to deploy your firebase, clone, fix and deploy.
   cd firebase-conao3/
 #+end_src
 
-** Fix
+** Fix .firebaserc
 Fix firebase project name in ~.firebaserc~.
 #+begin_src diff
   diff --git a/.firebaserc b/.firebaserc
