@@ -103,6 +103,17 @@ Fix firebase project name in ~.firebaserc~.
   firebase deploy
 #+end_src
 
+** Reference
+- [[https://console.firebase.google.com/][Firebase Console]]
+- [[https://expressjs.com/en/4x/api.html#res][Express]]
+  - [[https://expressjs.com/en/4x/api.html#req][Express Document - Request]]
+  - [[https://expressjs.com/en/4x/api.html#res][Express Document - Response]]
+- [[https://firebase.google.com/docs/guides/][Firebase]]
+  - [[https://firebase.google.com/docs/functions/][Firebase Document - Cloud Functions]]
+  - [[https://firebase.google.com/docs/reference/functions/][Firebase Reference - functions]]
+- [[https://cloud.google.com/docs/][Google Cloud Functions]]
+  - [[https://cloud.google.com/functions/docs/][Google Cloud Functions Document - Functions]]
+
 * License
 The GNU Affero General Public License, version 3 (AGPL3)
 
