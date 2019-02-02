@@ -60,10 +60,10 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
 
     response.type('svg');
 
-    console.log(`https://api.microbadger.com/v1/images/${username}/${imagename}`);
     fetch (`https://api.microbadger.com/v1/images/${username}/${imagename}`)
         .then (res => {
             if (!res.ok) {
+                console.error(`Fail accessed https://api.microbadger.com/v1/images/${username}/${imagename}`);
                 throw new Error('error');
             }
             return res.json();
