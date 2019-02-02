@@ -9,6 +9,9 @@
 
 - [[#install][Install]]
 - [[#usage][Usage]]
+- [[#local-test][Local test]]
+  - [[#localtest-notice][localtest NOTICE]]
+  - [[#functions-test][Functions test]]
 - [[#deploy][Deploy]]
   - [[#clone][Clone]]
   - [[#fix-firebaserc][Fix .firebaserc]]
@@ -24,6 +27,34 @@ Access https://us-central1-conao3-helper.cloudfunctions.net/hello or ~curl~ it.
 #+begin_src bash
   curl https://us-central1-conao3-helper.cloudfunctions.net/hello
     Hello from Firebase!
+#+end_src
+
+* Local test
+** localtest NOTICE
+When functions are tested locally, access to the database and
+saving are done on the production data.
+
+** Functions test
+Open other terminal and run it to automate build TS.
+#+begin_src bash
+  cd firebase-conao3/functions/
+  ./node_modules/.bin/tsc --watch
+#+end_src
+
+Serve functinos on localhost.
+#+begin_src bash
+  firebase serve --only functions --port=9000
+    === Serving from '/Users/conao/Develop/git/firebase-conao3'...
+
+    i  functions: Preparing to emulate functions.
+    Warning: You're using Node.js v11.8.0 but Google Cloud Functions only supports v6.11.5.
+    ✔  functions: hello: http://localhost:9000/conao3-helper/us-central1/hello
+#+end_src
+
+Access url on prompt.
+#+begin_src bash
+  curl http://localhost:9000/conao3-helper/us-central1/hello
+    Hellow from Firebase!
 #+end_src
 
 * Deploy
