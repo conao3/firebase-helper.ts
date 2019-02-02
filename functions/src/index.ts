@@ -43,7 +43,7 @@ export const hello = functions.https.onRequest((request, response) => {
 
 export const hello_args = functions.https.onRequest((request, response) => {
     if (request.path !== "/") {
-        let param = request.path.split('/')[1];
+        const param = request.path.split('/')[1];
         response.send("Hello from Firebase!" + param);
     } else {
         response.send("Hello from Firebase!");
@@ -69,9 +69,9 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
         })
         .then (resjson => {
             // response.send(`${jp.query(resjson, "$.DownloadSize")}`);
-            var leftstr:string;
-            var leftwidth:number;
-            var rightstr:string;
+            let leftstr:string;
+            let leftwidth:number;
+            let rightstr:string;
 
             switch (badgetype) {
                 case "name":
