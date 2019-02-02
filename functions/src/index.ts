@@ -25,7 +25,7 @@ const shield_docker_svg = (leftstr:string, rightstr:string, width:number, leftwi
     const leftcenter = leftwidth + (width-leftwidth)/2;
     const result = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20">
 <g>
-<rect x="0" y="0" width="100%" height="100%" fill=${color}></rect>
+<rect x="0" y="0" width="100%" height="100%" fill="${color}"></rect>
 <rect x="0" y="0" width="${leftwidth}" height="100%" fill="#555"></rect>
 </g>
 <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
@@ -42,6 +42,7 @@ export const hello = functions.https.onRequest((request, response) => {
 
 export const shield_docker = functions.https.onRequest ((request, response) => {
     // response.send("Hello from Firebase!");
+    response.type('svg');
     fetch ("https://api.microbadger.com/v1/images/conao3/po4a")
         .then (res => {
             if (!res.ok) {
