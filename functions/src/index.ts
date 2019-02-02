@@ -15,10 +15,26 @@
  */
 
 import fetch from 'node-fetch';
+import * as jp from 'jsonpath';
 import * as functions from 'firebase-functions';
 
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
+
+const shield_docker_svg = (leftstr:string, rightstr:string, width:number, leftwidth:number, color:string) => {
+    const leftcenter = leftwidth + (width-leftwidth)/2;
+    const result = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20">
+<g>
+<rect x="0" y="0" width="100%" height="100%" fill=${color}></rect>
+<rect x="0" y="0" width="${leftwidth}" height="100%" fill="#555"></rect>
+</g>
+<g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+<text x="5" y="14">${leftstr}</text>
+<text x="${leftcenter}" y="14" text-anchor="middle">${rightstr}</text>
+</g>
+</svg>`;
+    return result;
+};
 
 export const hello = functions.https.onRequest((request, response) => {
     response.send("Hello from Firebase!");
@@ -34,10 +50,12 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
             return res.json();
         })
         .then (resjson => {
-            response.send(JSON.stringify(resjson));
+            // response.send(`${jp.query(resjson, "$.DownloadSize")}`);
+            response.send(shield_docker_svg(
+                request.query.type, `${jp.query(resjson, "$.DownloadSize")}`, 170, 86, "#007ec6"));
         })
         .catch (error => {
-            response.send(JSON.stringify({ type: 'error' }));
+            response.send(shield_docker_svg(request.query.type, "unknown", 170, 86, "#9f9f9f"));
         });
 });
 
