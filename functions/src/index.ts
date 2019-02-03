@@ -37,16 +37,16 @@ const shield_docker_svg = (leftstr:string, rightstr:string, width:number, leftwi
     return result;
 };
 
-const github_header_svg = (str:string) => {
+const github_header_svg = (str:string, forground:string, background:string) => {
     const result = `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="170">
 <style xmlns="http://www.w3.org/2000/svg" type="text/css">
 @import url('https://fonts.googleapis.com/css?family=Sarabun:100');
 text {font-size: 70px; font-family: 'Sarabun', sans-serif; font-weight: 100;}
 </style>
 <g>
-<rect x="0" y="0" width="100%" height="100%" fill="#222"></rect>
+<rect x="0" y="0" width="100%" height="100%" fill="#${background}"></rect>
 </g>
-<g fill="#fff" font-family="Open Sans">
+<g fill="#${forground}" font-family="Open Sans">
 <text x="90" y="120" font-size="50">${str}</text>
 </g>
 </svg>`;
@@ -138,6 +138,9 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
 
 export const github_header = functions.https.onRequest ((req, res) => {
     let str;
+    const forground = req.query.forground || "FFF";
+    const background = req.query.background || "222";
+
     if (req.path !== '/') {
         try {
             str = decodeURIComponent(req.path.split('/')[1]);
@@ -150,7 +153,7 @@ export const github_header = functions.https.onRequest ((req, res) => {
     }
 
     res.type('svg');
-    res.send(github_header_svg(str));
+    res.send(github_header_svg(str, forground, background));
 });
 
 import * as moment from 'moment';
