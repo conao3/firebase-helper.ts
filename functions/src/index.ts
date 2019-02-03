@@ -143,7 +143,8 @@ export const github_header = functions.https.onRequest ((req, res) => {
 
     if (req.path !== '/') {
         try {
-            str = decodeURIComponent(req.path.split('/')[1]);
+            const args = req.path.split('/');
+            str = decodeURIComponent(args[1]).slice(0, -4);
         } catch (err) {
             console.log(`Fail decodeURIComponent, req.path = ${req.path}`);
             str = 'github-header';

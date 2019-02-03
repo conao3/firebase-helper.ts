@@ -62,7 +62,7 @@ https://us-central1-conao3-helper.cloudfunctions.net/date
 ** github_header
 Return header for GitHub.
 
-https://us-central1-conao3-helper.cloudfunctions.net/firebase-helper
+https://us-central1-conao3-helper.cloudfunctions.net/firebase-helper.svg
 #+begin_src bash
   curl http://localhost:9000/conao3-helper/us-central1/github_header/firebase-helper
     <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="170">
@@ -79,7 +79,7 @@ https://us-central1-conao3-helper.cloudfunctions.net/firebase-helper
     </svg>
 #+end_src
 
-https://us-central1-conao3-helper.cloudfunctions.net/:header
+https://us-central1-conao3-helper.cloudfunctions.net/:header.svg
 - ~:header~ is string
 
   If you use ~;/?:@&=+$-_!~*.,()#'~ in ~:header~, must be URL encoded.
@@ -90,7 +90,7 @@ https://us-central1-conao3-helper.cloudfunctions.net/:header
   - ~?:background~ is background color wuthout ~#~
   - ~?:forground~ is forground color withour ~#~
 
-ex: https://us-central1-conao3-helper.cloudfunctions.net/github_header/conao3%2Ffirebase-helper?forground=000&background=abc
+ex: https://us-central1-conao3-helper.cloudfunctions.net/github_header/conao3%2Ffirebase-helper.svg?forground=000&background=abc
 
 ** shield_docker
 *NOW UNAVAIRABLE in FREE FIREBASE ACCOUNT*
