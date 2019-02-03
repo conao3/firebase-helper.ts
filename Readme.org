@@ -60,9 +60,10 @@ https://us-central1-conao3-helper.cloudfunctions.net/date
 #+end_src
 
 ** github_header
+[[https://us-central1-conao3-helper.cloudfunctions.net/github_header/firebase-helper.svg][https://us-central1-conao3-helper.cloudfunctions.net/github_header/firebase-helper.svg]]
 Return header for GitHub.
 
-https://us-central1-conao3-helper.cloudfunctions.net/firebase-helper.svg
+https://us-central1-conao3-helper.cloudfunctions.net/github_header/firebase-helper.svg
 #+begin_src bash
   curl http://localhost:9000/conao3-helper/us-central1/github_header/firebase-helper
     <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="170">
@@ -79,7 +80,7 @@ https://us-central1-conao3-helper.cloudfunctions.net/firebase-helper.svg
     </svg>
 #+end_src
 
-https://us-central1-conao3-helper.cloudfunctions.net/:header.svg
+https://us-central1-conao3-helper.cloudfunctions.net/github_header/:header.svg
 - ~:header~ is string
 
   If you use ~;/?:@&=+$-_!~*.,()#'~ in ~:header~, must be URL encoded.
