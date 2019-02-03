@@ -6,8 +6,14 @@
 [[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/firebase-helper.gif]]
 
 ~firebase-helper~ is project hosting on google firebase.
+
 - [[#install][Install]]
 - [[#usage][Usage]]
+  - [[#hello][hello]]
+  - [[#hello_args][hello_args]]
+  - [[#date][date]]
+  - [[#github_header][github_header]]
+  - [[#shield_docker][shield_docker]]
 - [[#developer-information][Developer information]]
   - [[#install-developer-tools][Install developer tools]]
   - [[#local-test][Local test]]
