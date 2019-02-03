@@ -6,7 +6,6 @@
 [[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/firebase-helper.gif]]
 
 ~firebase-helper~ is project hosting on google firebase.
-
 - [[#install][Install]]
 - [[#usage][Usage]]
 - [[#developer-information][Developer information]]
@@ -26,10 +25,58 @@
 You don't need install. This project is already deployed on google firebase.
 
 * Usage
-Access https://us-central1-conao3-helper.cloudfunctions.net/hello or ~curl~ it.
+Access each url on browser, or ~curl~ it.
+** hello
+https://us-central1-conao3-helper.cloudfunctions.net/hello
 #+begin_src bash
   curl https://us-central1-conao3-helper.cloudfunctions.net/hello
     Hello from Firebase!
+#+end_src
+
+** hello_args
+https://us-central1-conao3-helper.cloudfunctions.net/hello_args/coano3
+#+begin_src bash
+  curl https://us-central1-conao3-helper.cloudfunctions.net/hello_args/conao3
+    Hello from Firebase!conao3
+#+end_src
+
+** shield_docker
+*NOW UNAVAIRABLE in FREE FIREBASE ACCOUNT*
+As free firebase account's function is not allowed accessing other api,
+this function don't working.
+
+It works only localhost :)
+
+https://us-central1-conao3-helper.cloudfunctions.net/shield_docker/conao3/po4a/name
+#+begin_src bash
+  curl https://us-central1-conao3-helper.cloudfunctions.net/shield_docker/conao3/po4a/name
+    <svg xmlns="http://www.w3.org/2000/svg" width="170" height="20">
+    <g>
+    <rect x="0" y="0" width="100%" height="100%" fill="#007ec6"></rect>
+    <rect x="0" y="0" width="86" height="100%" fill="#555"></rect>
+    </g>
+    <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text x="5" y="14">docker unknown</text>
+    <text x="128" y="14" text-anchor="middle">unknown</text>
+    </g>
+    </svg>
+#+end_src
+
+https://us-central1-conao3-helper.cloudfunctions.net/shield_docker/:username/:imagename/:badgetype
+- ~:username~ and ~:imagename~ use of [[https://microbadger.com/][MicroBadger]].
+- ~badgetype~ is allowed below type
+  - name
+  - layers
+  - size
+  - version
+  - pulls
+  - stars
+
+** date
+https://us-central1-conao3-helper.cloudfunctions.net/date
+#+begin_src bash
+  curl https://us-central1-conao3-helper.cloudfunctions.net/date
+    2019-02-03T03:15:11+00:00
 #+end_src
 
 * Developer information
