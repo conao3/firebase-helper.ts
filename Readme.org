@@ -72,6 +72,10 @@ http://localhost:9000/conao3-helper/us-central1/github_header/firebase-helper
 http://localhost:9000/conao3-helper/us-central1/github_header/:header
 - ~:header~ is string
 
+  If you use ~;/?:@&=+$-_!~*.,()#'~ in ~:header~, must be URL encoded.
+
+  Fail ~decodeURIComponent~, or not specify argument, return svg with ~github-header~.
+
 ** shield_docker
 *NOW UNAVAIRABLE in FREE FIREBASE ACCOUNT*
 
