@@ -37,6 +37,22 @@ const shield_docker_svg = (leftstr:string, rightstr:string, width:number, leftwi
     return result;
 };
 
+const github_header_svg = (str:string) => {
+    const result = `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="170">
+<style xmlns="http://www.w3.org/2000/svg" type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Sarabun:100');
+text {font-size: 70px; font-family: 'Sarabun', sans-serif; font-weight: 100;}
+</style>
+<g>
+<rect x="0" y="0" width="100%" height="100%" fill="#222"></rect>
+</g>
+<g fill="#fff" font-family="Open Sans">
+<text x="90" y="120" font-size="50">${str}</text>
+</g>
+</svg>`;
+    return result;
+};
+
 export const hello = functions.https.onRequest((request, response) => {
     response.send("Hello from Firebase!");
 });
@@ -118,6 +134,13 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
         .catch (error => {
             response.send(shield_docker_svg("docker unknown", "unknown", 170, 86, color));
         });
+});
+
+export const github_header = functions.https.onRequest ((req, res) => {
+    const str = req.path !== '/' ? req.path.split('/')[1] : "github-header";
+
+    res.type('svg');
+    res.send(github_header_svg(str));
 });
 
 import * as moment from 'moment';
