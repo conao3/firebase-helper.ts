@@ -21,6 +21,9 @@
 - [[#license][License]]
 - [[#author][Author]]
 
+* License Terms
+Display license such as [[#license][license]] section If you use this project API or code in your project.
+
 * Install
 You don't need install. This project is already deployed on google firebase.
 
@@ -203,20 +206,7 @@ The GNU Affero General Public License, version 3 (AGPL3)
 
 Copyright (c) 2019 Naoya Yamashita (@conao3) - https://conao3.com
 
-#+begin_quote
-This program is free software: you can redistribute it and/or modify it
-under the terms of the Affero GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or (at your
-option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT
-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-FITNESS FOR A PARTICULAR PURPOSE.  See the Affero GNU General Public
-License for more details.
-
-You should have received a copy of the Affero GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#+end_quote
+https://github.com/conao3/firebase-helper/blob/master/LICENSE
 
 * Author
 Naoya Yamashita (@conao3)
