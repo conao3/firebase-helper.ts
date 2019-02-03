@@ -40,6 +40,9 @@ https://us-central1-conao3-helper.cloudfunctions.net/hello_args/coano3
     Hello from Firebase!conao3
 #+end_src
 
+https://us-central1-conao3-helper.cloudfunctions.net/hello_args/:name
+- ~:name~ is string
+
 ** shield_docker
 *NOW UNAVAIRABLE in FREE FIREBASE ACCOUNT*
 
