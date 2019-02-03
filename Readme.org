@@ -43,6 +43,13 @@ https://us-central1-conao3-helper.cloudfunctions.net/hello_args/coano3
 https://us-central1-conao3-helper.cloudfunctions.net/hello_args/:name
 - ~:name~ is string
 
+** date
+https://us-central1-conao3-helper.cloudfunctions.net/date
+#+begin_src bash
+  curl https://us-central1-conao3-helper.cloudfunctions.net/date
+    2019-02-03T03:15:11+00:00
+#+end_src
+
 ** shield_docker
 *NOW UNAVAIRABLE in FREE FIREBASE ACCOUNT*
 
@@ -75,13 +82,6 @@ https://us-central1-conao3-helper.cloudfunctions.net/shield_docker/:username/:im
   - version
   - pulls
   - stars
-
-** date
-https://us-central1-conao3-helper.cloudfunctions.net/date
-#+begin_src bash
-  curl https://us-central1-conao3-helper.cloudfunctions.net/date
-    2019-02-03T03:15:11+00:00
-#+end_src
 
 * Developer information
 ** Install developer tools
