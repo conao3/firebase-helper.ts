@@ -137,7 +137,17 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
 });
 
 export const github_header = functions.https.onRequest ((req, res) => {
-    const str = req.path !== '/' ? req.path.split('/')[1] : "github-header";
+    let str;
+    if (req.path !== '/') {
+        try {
+            str = decodeURIComponent(req.path.split('/')[1]);
+        } catch (err) {
+            console.log(`Fail decodeURIComponent, req.path = ${req.path}`);
+            str = 'github-header';
+        }
+    } else {
+        str = 'github_header';
+    }
 
     res.type('svg');
     res.send(github_header_svg(str));
