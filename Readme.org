@@ -76,6 +76,12 @@ http://localhost:9000/conao3-helper/us-central1/github_header/:header
 
   Fail ~decodeURIComponent~, or not specify argument, return svg with ~github-header~.
 
+- urlquery
+  - ~?:background~ is background color wuthout ~#~
+  - ~?:forground~ is forground color withour ~#~
+
+ex: http://localhost:9000/conao3-helper/us-central1/github_header/conao3%2Ffirebase-helper?forground=000&background=abc
+
 ** shield_docker
 *NOW UNAVAIRABLE in FREE FIREBASE ACCOUNT*
 
