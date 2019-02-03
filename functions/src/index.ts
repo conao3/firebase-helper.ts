@@ -18,6 +18,7 @@ import fetch from 'node-fetch';
 import * as prettyBytes from 'pretty-bytes';
 import * as jp from 'jsonpath';
 import * as functions from 'firebase-functions';
+const exec = require('child_process').exec;
 
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
@@ -64,6 +65,15 @@ export const hello_args = functions.https.onRequest((request, response) => {
     } else {
         response.send("Hello from Firebase!");
     }
+});
+
+export const hello_exec = functions.https.onRequest((request, response) => {
+    exec('ls -la ./', (err:string, stdout:string, stderr:string) => {
+        if (err) { console.log(err); }
+        const str = stdout;
+        console.log(stdout);
+        response.send(`Hello from Firebase! ${str}`);
+    });
 });
 
 export const shield_docker = functions.https.onRequest ((request, response) => {
