@@ -34,7 +34,7 @@ https://us-central1-conao3-helper.cloudfunctions.net/hello
 #+end_src
 
 ** hello_args
-https://us-central1-conao3-helper.cloudfunctions.net/hello_args/coano3
+https://us-central1-conao3-helper.cloudfunctions.net/hello_args/conao3
 #+begin_src bash
   curl https://us-central1-conao3-helper.cloudfunctions.net/hello_args/conao3
     Hello from Firebase!conao3
