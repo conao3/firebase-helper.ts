@@ -1,12 +1,19 @@
 #+author: conao3
 #+date: <2019-01-31 Thu>
 
-[[https://github.com/conao3/firebase-helper][https://img.shields.io/github/tag/conao3/firebase-helper.svg?style=flat-square]]
-[[https://github.com/conao3/firebase-helper][https://img.shields.io/github/license/conao3/firebase-helper.svg?style=flat-square]]
-[[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/firebase-helper.gif]]
 
-~firebase-helper~ is project hosting on google firebase.
+[[https://github.com/conao3/coder][https://raw.githubusercontent.com/conao3/files/master/header/png/coder.png]]
+[[https://github.com/conao3/coder/blob/master/LICENSE][https://img.shields.io/github/license/conao3/coder.svg?style=flat-square]]
+[[https://github.com/conao3/coder/releases][https://img.shields.io/github/tag/conao3/coder.svg?style=flat-square]]
+[[https://travis-ci.org/conao3/coder][https://img.shields.io/travis/conao3/coder/master.svg?style=flat-square]]
+[[https://app.codacy.com/project/conao3/coder/dashboard][https://img.shields.io/codacy/grade/33d03999cdb9426abb716e23a8d11b1d.svg?logo=codacy&style=flat-square]]
+[[https://www.patreon.com/conao3][https://img.shields.io/badge/patreon-@conao3-orange.svg?logo=patreon&style=flat-square]]
+[[https://twitter.com/conao_3][https://img.shields.io/badge/twitter-@conao__3-blue.svg?logo=twitter&style=flat-square]]
+[[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
 
+* Table of Contents
+- [[#background][Background]]
+- [[#license-terms][License Terms]]
 - [[#install][Install]]
 - [[#usage][Usage]]
   - [[#hello][hello]]
@@ -23,9 +30,17 @@
     - [[#clone][Clone]]
     - [[#fix-firebaserc][Fix .firebaserc]]
     - [[#deploy][Deploy]]
+- [[#information][Information]]
   - [[#reference][Reference]]
-- [[#license][License]]
-- [[#author][Author]]
+  - [[#donation][Donation]]
+  - [[#community][Community]]
+  - [[#contribution][Contribution]]
+  - [[#license][License]]
+  - [[#author][Author]]
+  - [[#contributors][Contributors]]
+
+* Background
+~firebase-helper~ is project hosting on google firebase.
 
 * License Terms
 Display license such as [[#license][license]] section If you use this project API or code in your project.
@@ -198,6 +213,7 @@ Fix firebase project name in ~.firebaserc~.
   firebase deploy
 #+end_src
 
+* Information
 ** Reference
 - [[https://console.firebase.google.com/][Firebase Console]]
 - [[https://expressjs.com/en/4x/api.html#res][Express]]
@@ -209,12 +225,31 @@ Fix firebase project name in ~.firebaserc~.
 - [[https://cloud.google.com/docs/][Google Cloud Functions]]
   - [[https://cloud.google.com/functions/docs/][Google Cloud Functions Document - Functions]]
 
-* License
-The GNU Affero General Public License, version 3 (AGPL3)
+** Donation
+I love OSS and I am dreaming of working on it as *full-time* job.
 
-Copyright (c) 2019 Naoya Yamashita (@conao3) - https://conao3.com
+*With your support*, I will be able to spend more time at OSS!
 
-https://github.com/conao3/firebase-helper/blob/master/LICENSE
+[[https://www.patreon.com/conao3][https://c5.patreon.com/external/logo/become_a_patron_button.png]]
 
-* Author
-Naoya Yamashita (@conao3)
+** Community
+All feedback and suggestions are welcome!
+
+You can use github issues, but you can also use [[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][Slack]]
+if you want a more casual conversation.
+
+** Contribution
+Feel free to send PR!
+
+** License
+#+begin_example
+  Affero General Public License Version 3 (AGPLv3)
+  Copyright (c) Naoya Yamashita - https://conao3.com
+  https://github.com/conao3/coder/blob/master/LICENSE
+#+end_example
+
+** Author
+- Naoya Yamashita ([[https://github.com/conao3][conao3]])
+
+** Contributors
+- Not yet... Now send PR and add your name!!
