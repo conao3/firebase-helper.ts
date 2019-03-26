@@ -20,20 +20,19 @@
   - [[#date][date]]
   - [[#github_header][github_header]]
   - [[#shield_docker][shield_docker]]
-- [[#developer-information][Developer information]]
-  - [[#install-developer-tools][Install developer tools]]
-  - [[#local-test][Local test]]
-    - [[#localtest-notice][localtest NOTICE]]
-    - [[#functions-test][Functions test]]
-  - [[#deploy][Deploy]]
-    - [[#clone][Clone]]
-    - [[#fix-firebaserc][Fix .firebaserc]]
-    - [[#deploy][Deploy]]
 - [[#information][Information]]
-  - [[#reference][Reference]]
   - [[#donation][Donation]]
   - [[#community][Community]]
   - [[#contribution][Contribution]]
+    - [[#install-developer-tools][Install developer tools]]
+    - [[#local-test][Local test]]
+      - [[#localtest-notice][localtest NOTICE]]
+      - [[#functions-test][Functions test]]
+    - [[#deploy][Deploy]]
+      - [[#clone][Clone]]
+      - [[#fix-firebaserc][Fix .firebaserc]]
+      - [[#deploy][Deploy]]
+      - [[#reference][Reference]]
   - [[#license][License]]
   - [[#author][Author]]
   - [[#contributors][Contributors]]
@@ -140,8 +139,24 @@ https://us-central1-conao3-helper.cloudfunctions.net/shield_docker/:username/:im
   - pulls
   - stars
 
-* Developer information
-** Install developer tools
+* Information
+** Donation
+I love OSS and I am dreaming of working on it as *full-time* job.
+
+*With your support*, I will be able to spend more time at OSS!
+
+[[https://www.patreon.com/conao3][https://c5.patreon.com/external/logo/become_a_patron_button.png]]
+
+** Community
+All feedback and suggestions are welcome!
+
+You can use github issues, but you can also use [[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][Slack]]
+if you want a more casual conversation.
+
+** Contribution
+Feel free to send PR!
+
+*** Install developer tools
 #+begin_src bash
   # firebase-tool initialize if you need
   npm install -g firebase-tools
@@ -151,12 +166,12 @@ https://us-central1-conao3-helper.cloudfunctions.net/shield_docker/:username/:im
   npm install
 #+end_src
 
-** Local test
-*** localtest NOTICE
+*** Local test
+**** localtest NOTICE
 When functions are tested locally, access to the database and
 saving are done on the production data.
 
-*** Functions test
+**** Functions test
 cf: https://firebase.google.com/docs/functions/local-emulator
 
 Open other terminal and run it to automate build TS.
@@ -181,17 +196,28 @@ Access url on prompt.
     Hellow from Firebase!
 #+end_src
 
-** Deploy
+*** Reference
+- [[https://console.firebase.google.com/][Firebase Console]]
+- [[https://expressjs.com/en/4x/api.html#res][Express]]
+  - [[https://expressjs.com/en/4x/api.html#req][Express Document - Request]]
+  - [[https://expressjs.com/en/4x/api.html#res][Express Document - Response]]
+- [[https://firebase.google.com/docs/guides/][Firebase]]
+  - [[https://firebase.google.com/docs/functions/][Firebase Document - Cloud Functions]]
+  - [[https://firebase.google.com/docs/reference/functions/][Firebase Reference - Functions]]
+- [[https://cloud.google.com/docs/][Google Cloud Functions]]
+  - [[https://cloud.google.com/functions/docs/][Google Cloud Functions Document - Functions]]
+
+*** Deploy
 If you want to deploy your firebase, clone, fix and deploy.
 
-*** Clone
+**** Clone
 #+begin_src bash
   git clone https://github.com/conao3/firebase-helper
 
   cd firebase-helper/
 #+end_src
 
-*** Fix .firebaserc
+**** Fix .firebaserc
 Fix firebase project name in ~.firebaserc~.
 #+begin_src diff
   diff --git a/.firebaserc b/.firebaserc
@@ -207,48 +233,20 @@ Fix firebase project name in ~.firebaserc~.
    }
 #+end_src
 
-*** Deploy
+**** Deploy
 #+begin_src bash
   firebase deploy
 #+end_src
 
-* Information
-** Reference
-- [[https://console.firebase.google.com/][Firebase Console]]
-- [[https://expressjs.com/en/4x/api.html#res][Express]]
-  - [[https://expressjs.com/en/4x/api.html#req][Express Document - Request]]
-  - [[https://expressjs.com/en/4x/api.html#res][Express Document - Response]]
-- [[https://firebase.google.com/docs/guides/][Firebase]]
-  - [[https://firebase.google.com/docs/functions/][Firebase Document - Cloud Functions]]
-  - [[https://firebase.google.com/docs/reference/functions/][Firebase Reference - Functions]]
-- [[https://cloud.google.com/docs/][Google Cloud Functions]]
-  - [[https://cloud.google.com/functions/docs/][Google Cloud Functions Document - Functions]]
-
-** Donation
-I love OSS and I am dreaming of working on it as *full-time* job.
-
-*With your support*, I will be able to spend more time at OSS!
-
-[[https://www.patreon.com/conao3][https://c5.patreon.com/external/logo/become_a_patron_button.png]]
-
-** Community
-All feedback and suggestions are welcome!
-
-You can use github issues, but you can also use [[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][Slack]]
-if you want a more casual conversation.
-
-** Contribution
-Feel free to send PR!
-
-** License
+*** License
 #+begin_example
   Affero General Public License Version 3 (AGPLv3)
   Copyright (c) Naoya Yamashita - https://conao3.com
   https://github.com/conao3/firebase-helper.ts/blob/master/LICENSE
 #+end_example
 
-** Author
+*** Author
 - Naoya Yamashita ([[https://github.com/conao3][conao3]])
 
-** Contributors
+*** Contributors
 - Not yet... Now send PR and add your name!!
