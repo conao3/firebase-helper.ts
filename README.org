@@ -1,12 +1,11 @@
-#+author: conao3
+#+author: conao
 #+date: <2019-01-31 Thu>
 
-
-[[https://github.com/conao3/coder][https://raw.githubusercontent.com/conao3/files/master/header/png/coder.png]]
-[[https://github.com/conao3/coder/blob/master/LICENSE][https://img.shields.io/github/license/conao3/coder.svg?style=flat-square]]
-[[https://github.com/conao3/coder/releases][https://img.shields.io/github/tag/conao3/coder.svg?style=flat-square]]
-[[https://travis-ci.org/conao3/coder][https://img.shields.io/travis/conao3/coder/master.svg?style=flat-square]]
-[[https://app.codacy.com/project/conao3/coder/dashboard][https://img.shields.io/codacy/grade/33d03999cdb9426abb716e23a8d11b1d.svg?logo=codacy&style=flat-square]]
+[[https://github.com/conao3/firebase-helper.ts][https://raw.githubusercontent.com/conao3/files/master/header/png/firebase-helper.ts.png]]
+[[https://github.com/conao3/firebase-helper.ts/blob/master/LICENSE][https://img.shields.io/github/license/conao3/firebase-helper.ts.svg?style=flat-square]]
+[[https://github.com/conao3/firebase-helper.ts/releases][https://img.shields.io/github/tag/conao3/firebase-helper.ts.svg?style=flat-square]]
+[[https://travis-ci.org/conao3/firebase-helper.ts][https://img.shields.io/travis/conao3/firebase-helper.ts/master.svg?style=flat-square]]
+[[https://app.codacy.com/project/conao3/firebase-helper.ts/dashboard][https://img.shields.io/codacy/grade/3be4830366a5413d9654c74653ad2dc5.svg?logo=codacy&style=flat-square]]
 [[https://www.patreon.com/conao3][https://img.shields.io/badge/patreon-@conao3-orange.svg?logo=patreon&style=flat-square]]
 [[https://twitter.com/conao_3][https://img.shields.io/badge/twitter-@conao__3-blue.svg?logo=twitter&style=flat-square]]
 [[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
@@ -245,7 +244,7 @@ Feel free to send PR!
 #+begin_example
   Affero General Public License Version 3 (AGPLv3)
   Copyright (c) Naoya Yamashita - https://conao3.com
-  https://github.com/conao3/coder/blob/master/LICENSE
+  https://github.com/conao3/firebase-helper.ts/blob/master/LICENSE
 #+end_example
 
 ** Author
