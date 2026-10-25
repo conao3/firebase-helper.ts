@@ -15,7 +15,7 @@
  */
 
 import fetch from 'node-fetch';
-import * as prettyBytes from 'pretty-bytes';
+import prettyBytes from 'pretty-bytes';
 import * as jp from 'jsonpath';
 import * as functions from 'firebase-functions';
 const exec = require('child_process').exec;
@@ -82,7 +82,7 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
     const username = args[1];
     const imagename = args[2];
     const badgetype = args[3];
-    const color = request.query.color || "007ec6";
+    const color = String(request.query.color || "007ec6");
 
     response.type('svg');
 
@@ -148,8 +148,8 @@ export const shield_docker = functions.https.onRequest ((request, response) => {
 
 export const github_header = functions.https.onRequest ((req, res) => {
     let str;
-    const forground = req.query.forground || "FFF";
-    const background = req.query.background || "222";
+    const forground = String(req.query.forground || "FFF");
+    const background = String(req.query.background || "222");
 
     if (req.path !== '/') {
         try {
@@ -167,7 +167,7 @@ export const github_header = functions.https.onRequest ((req, res) => {
     res.send(github_header_svg(str, forground, background));
 });
 
-import * as moment from 'moment';
+import moment from 'moment';
 const cors = require('cors')({
     origin: true,
 });
@@ -181,7 +181,7 @@ export const date = functions.https.onRequest ((req, res) => {
         if (!format) {
             format = req.body.format;
         }
-        const formattedDate = moment().format(format);
+        const formattedDate = moment().format(String(format));
         console.log('Sending Formatted date:', formattedDate);
         res.status(200).send(formattedDate);
     });
